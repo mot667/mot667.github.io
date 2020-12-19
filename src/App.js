@@ -27,24 +27,10 @@ function App() {
 
 
   document.body.style.height = "100%";
-  const [open, setOpen] = useState(false);
   const node = useRef();
   const menuId = "main-menu";
 
-  const [offset, setOffset] = useState(0);
 
-  const listener = e => {
-    setOffset(window.pageYOffset);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", listener);
-    return () => {
-      window.removeEventListener("scroll", listener);
-    };
-  });
-
-  useOnClickOutside(node, () => setOpen(false));
 
   
   
@@ -59,17 +45,14 @@ function App() {
         <GlobalStyles />
         <div ref={node}>
   
-          <FocusLock disabled={!open}>
-            <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
-            <Menu open={open} setOpen={setOpen} id={menuId} />
-          </FocusLock>
+
          
       <header
         className="header-background"
-        style={{ backgroundPositionY: offset}}
+       
   
       >
-        <section className="info-container" style={{ bottom: offset / 2 }}>
+        <section className="info-container" >
           <div style = {{color: 'black', fontSize: 30}}>
           <Typical wrapper="span" steps={steps} loop={10000} className={'caca'} />
           </div>
