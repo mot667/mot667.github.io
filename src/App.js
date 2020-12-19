@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, Image} from 'react';
 import { ThemeProvider } from 'styled-components';
 import { useOnClickOutside } from './hooks';
 import { GlobalStyles } from './global';
-import { theme } from './theme';
+//import { theme } from './theme';
 import { Burger, Menu } from './components';
 import FocusLock from 'react-focus-lock';
 import Typical from 'react-typical';
@@ -27,10 +27,24 @@ function App() {
 
 
   document.body.style.height = "100%";
+  const [open, setOpen] = useState(false);
   const node = useRef();
   const menuId = "main-menu";
 
+  const [offset, setOffset] = useState(0);
 
+  const listener = e => {
+    setOffset(window.pageYOffset);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", listener);
+    return () => {
+      window.removeEventListener("scroll", listener);
+    };
+  });
+
+  useOnClickOutside(node, () => setOpen(false));
 
   
   
@@ -39,20 +53,20 @@ function App() {
     
  
 
-    <ThemeProvider theme={theme}>
 
-      <>
-        <GlobalStyles />
-        <div ref={node}>
+        <div>
   
-
+          <FocusLock disabled={!open}>
+            <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
+            <Menu open={open} setOpen={setOpen} id={menuId} />
+          </FocusLock>
          
       <header
         className="header-background"
-       
+        style={{ backgroundPositionY: offset}}
   
       >
-        <section className="info-container" >
+        <section className="info-container" style={{ bottom: offset / 2 }}>
           <div style = {{color: 'black', fontSize: 30}}>
           <Typical wrapper="span" steps={steps} loop={10000} className={'caca'} />
           </div>
@@ -584,9 +598,9 @@ function App() {
         </div>
         
         
-      </>
+      
 
-    </ThemeProvider>
+
 
   );
 }
