@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "88de7831f86a3631166c6e6e39d62a2d",
+    "revision": "493f0026e1a73903d4d54c40579460ab",
     "url": "./index.html"
   },
   {
-    "revision": "ad9aee96f188a7a21f7a",
+    "revision": "6da2727ed227aa518dca",
     "url": "./static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "1eb4f1d82aed9135d062",
+    "revision": "537ffc90a3899afe0f93",
     "url": "./static/css/main.c7c7db8a.chunk.css"
   },
   {
-    "revision": "ad9aee96f188a7a21f7a",
-    "url": "./static/js/2.0a2bd51d.chunk.js"
+    "revision": "6da2727ed227aa518dca",
+    "url": "./static/js/2.0079b93e.chunk.js"
   },
   {
-    "revision": "b9da976c5b5fc97625d7af4ff88bc559",
-    "url": "./static/js/2.0a2bd51d.chunk.js.LICENSE.txt"
+    "revision": "6e955cdac22de8c1616c1bb714390207",
+    "url": "./static/js/2.0079b93e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1eb4f1d82aed9135d062",
-    "url": "./static/js/main.b046d123.chunk.js"
+    "revision": "537ffc90a3899afe0f93",
+    "url": "./static/js/main.c8effd3d.chunk.js"
   },
   {
     "revision": "610a38b7b5a7cb7b2d5e",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8ac3b5d4477a35d7c4e9f75fc077358d",
     "url": "./static/media/gmailLogo.8ac3b5d4.png"
+  },
+  {
+    "revision": "c9e789161cfcee0ca496af22be0a3620",
+    "url": "./static/media/instagram.c9e78916.png"
   },
   {
     "revision": "f756c437aa723da0b60656324b850044",
