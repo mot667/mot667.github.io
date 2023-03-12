@@ -57,7 +57,7 @@ function App() {
         <div>
   
           <FocusLock disabled={!open}>
-            <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
+            <Burger open={open} setOpen={setOpen} />
             <Menu open={open} setOpen={setOpen} id={menuId} />
           </FocusLock>
          
@@ -82,7 +82,7 @@ function App() {
               Profile
             </div>
             <div style = {{fontSize: 21, paddingTop:30 }}>
-              Im a Software Engineering student
+              Software Engineer
             </div>
             <hr style = {{marginTop: 40, marginBottom: 40, opacity: 0.8, borderColor: 'white'}}></hr>
 
@@ -92,9 +92,7 @@ function App() {
               About Me
             </h3>
             <p style = {{textAlign: "left"}}>
-              Here is stuff about me. I am cool awesome super huge. Like massive. Like weirdly big. Like
-              I'm kinda concerned abbout how huge I am. All nat like no steroids. I know right. You would
-              think that someone this size would 100% be on steroids.
+              Stuff about me will be here!
             </p>
           </div>
           <div class = "col-md-4 text-center">
@@ -111,7 +109,7 @@ function App() {
               <br></br>
               <strong>Age: </strong>
               <br></br>
-              21
+              23
               <br></br>
               <strong>Location: </strong>
               <br></br>
